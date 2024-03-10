@@ -1,5 +1,4 @@
-var hello = function () {
-    console.log("hello")
-}
+const log = require('./logger')
+// console.log(log)
 
-window.hello()
+log("hello")
