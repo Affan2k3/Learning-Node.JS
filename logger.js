@@ -1,13 +1,20 @@
+const EventEmitter = require("events")
 
 
 var url = "jf dsj jdsl"
 
-function log(message) {
-    console.log(message)
+
+class Logger extends EventEmitter {
+
+  log(message) {
+        console.log(message)
+        this.emit("message", { name: "AFFAN", age: 20})
+    }
 }
 
-console.log('kk',__filename)
 
-module.exports = log
+
+
+module.exports = Logger
 
 module.exports.endpoint = url
